@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Formulario
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <ion-list>
+          <ion-item>
+            <ion-input [(ngModel)]="dni" type="text" placeholder="DNI"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="nombre" type="text" placeholder="Nombre"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="apellido" type="text" placeholder="Apellido"></ion-input>
+          </ion-item>
+        </ion-list>
+        <button ion-button (click)="crearPersona()">Submit</button>
+
+      </ion-col>
+
+      <ion-col col-4>
+        <ion-card 
+        *ngFor="let p of arrayPersonas" 
+        [class.card-selected]="p === pseleccionada" 
+        (click)="mostrarPersona(p)">
+          <ion-card-header>
+            {{p.apellido}}
+          </ion-card-header>
+          <ion-card-content>
+            {{p.nombre}}
+            <br> {{p.dni}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col col-4>
+        <div>
+          <p>Apellido: {{pseleccionada?.apellido}}</p>
+          <p>Nombre: {{pseleccionada?.nombre}}</p>
+          <p>DNI: {{pseleccionada?.dni}}</p>
+        </div>
+        <persona-detalle></persona-detalle>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
