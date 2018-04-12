@@ -1,12 +1,12 @@
 
 export default class Persona {
-    dni: number;
-    nombre: string;
-    apellido: string;
+    name: string;
+    username: string;
+    email: string;
 
-    constructor({dni, nombre, apellido}){
-        this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
+    constructor({name, username, email}){
+        this.name = name;
+        this.username = username;
+        this.email = email;
     }
 }

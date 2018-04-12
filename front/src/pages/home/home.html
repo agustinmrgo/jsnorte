@@ -27,27 +27,19 @@
       </ion-col>
 
       <ion-col col-4>
-        <ion-card 
-        *ngFor="let p of arrayPersonas" 
-        [class.card-selected]="p === pseleccionada" 
-        (click)="mostrarPersona(p)">
+        <ion-card *ngFor="let p of arrayPersonas" [class.card-selected]="p === pseleccionada" (click)="mostrarPersona(p)">
           <ion-card-header>
-            {{p.apellido}}
+            {{p.name}}
           </ion-card-header>
           <ion-card-content>
-            {{p.nombre}}
-            <br> {{p.dni}}
+            {{p.username}}
+            <br> {{p.email}}
           </ion-card-content>
         </ion-card>
       </ion-col>
 
       <ion-col col-4>
-        <div>
-          <p>Apellido: {{pseleccionada?.apellido}}</p>
-          <p>Nombre: {{pseleccionada?.nombre}}</p>
-          <p>DNI: {{pseleccionada?.dni}}</p>
-        </div>
-        <persona-detalle></persona-detalle>
+        <page-persona-detalle [p]="pseleccionada"></page-persona-detalle>
       </ion-col>
 
     </ion-row>
