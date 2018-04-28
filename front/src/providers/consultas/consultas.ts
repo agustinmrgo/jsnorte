@@ -16,21 +16,18 @@ export class ConsultasProvider {
     console.log('Hello ConsultasProvider Provider');
   }
 
-  // holis (){
-  //   return new Promise( (resolve, reject) => {
-  //     //let headers = new Headers();
-  //     //headers.append("Content-Type","application/json");
-  //     this.http1.get("https://jsonplaceholder.typicode.com/users")
-  //       .map( res => res)
-  //       .subscribe((res:any) => {
-  //       //let response = res.json();
-  //       console.log(res);
-  //       resolve(res);
-  //     });
-  //   })
-  // }
+  holis (){
+    return new Promise((resolve, reject) => {
+      this.http1.get("https://jsonplaceholder.typicode.com/users")
+        .map( res => res)
+        .subscribe((res:any) => {
+        console.log("Respuesta desde jsonplaceholder"+res);
+        resolve(res);
+      });
+    })
+  }
 
-  nuevoMarengo (parametros){
+/*   nuevoMarengo (parametros){
     return new Promise( (resolve, reject) => {
       let headers = new Headers();
       headers.append("Content-Type","application/json");
@@ -41,5 +38,5 @@ export class ConsultasProvider {
         resolve(res);
       });
     });
-  }
+  } */
 }

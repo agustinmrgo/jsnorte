@@ -20,14 +20,15 @@ export class HomePage {
   p2: boolean;
 
   constructor(public navCtrl: NavController, private prv: ConsultasProvider, private navPrm: NavParams) {
-    // this.prv.holis().then((res) => {
-    //   this.arrayPersonas = res;
-    //   console.log(this.arrayPersonas);
-    // });
+    this.prv.holis().then((res) => {
+      this.arrayPersonas = res;
+      console.log("Holis promesa cumplida");
+      console.log(this.arrayPersonas);
+    });
   }
 
   crearPersona() {
-    //objeto mapeado con Persona con pura magia
+    // objeto mapeado con Persona con pura magia
     let temp = {
       name: this.dni,
       username: this.nombre,
@@ -35,21 +36,20 @@ export class HomePage {
     }
     let p = new Persona(temp);
     console.log(p);
-    //this.arrayPersonas.push(p);
-    //limpiar formulario
+    // this.arrayPersonas.push(p);
+    // limpiar formulario
     this.dni = null;
     this.nombre = null;
     this.apellido = null;
-    this.navCtrl.push(PersonaDetallePage, {persona: p});
-    let parametros = {
-      name: p.name,
-      username: p.username,
-      mail: p.email
-    }
-    this.prv.nuevoMarengo(parametros).then((res) => {
-      console.log("Respuesta desde el Home.ts",res);
-    });
-
+    // this.navCtrl.push(PersonaDetallePage, {persona: p});
+    // let parametros = {
+    //   name: p.name,
+    //   username: p.username,
+    //   mail: p.email
+    // }
+    // this.prv.nuevoMarengo(parametros).then((res) => {
+    //   console.log("Respuesta desde el Home.ts",res);
+    // });
   }
 
   pseleccionada: Persona;
