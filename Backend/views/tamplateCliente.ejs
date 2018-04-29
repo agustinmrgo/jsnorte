@@ -1,0 +1,229 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>The HTML5 Herald</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
+        <style> 
+          .tabla{
+            width: 50%;
+            float: left;
+          }
+
+            .panel-default>.panel-heading {
+                color: #333 !important;
+                background-color: #f5f5f5 !important;
+                border-color: #ddd !important;
+            }
+
+            .panel{
+              max-width: 400px;
+              margin: 0 auto;
+              margin-top: 25px;
+            }
+
+            .tablasJuntas{
+              border-top: 3px solid black;
+              border-bottom: 3px solid black;
+              margin-top: 20px;
+            }   
+
+            html {
+              height: 100%;
+                zoom:0.55;  
+            }
+            body {
+              min-height: 100%;
+              padding: 16px;
+            }
+
+            .navbar-default {
+                background-color: transparent !important;
+                border-color: transparent !important;
+            }
+
+            img{
+              max-width: 200px;
+              float: right;
+            }
+
+            .col-4{
+              WIDTH: 33%;
+              FLOAT: LEFT;
+              text-align: center;
+            }
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+ 
+        <div class="container-fluid navbar-default">
+          <div class="navbar-header">
+            <div class="row container">
+              <div class="col-4">
+                <span>Fecha de Impresion: <%= data.fechaImpresion %></span>
+              </div>
+              <div class="col-4">
+                <span>Comprobante Int de Operacion Propietarios de Tarjeta</span>
+              </div>
+              <div class="col-4">
+                <img alt="Brand" src="rsz_11logo.png">
+              </div>
+            </div>
+          </div>
+        </div>
+   
+        <div class="container-fluid">
+            <div class="row tablasJuntas">
+              <div class="tabla">
+                  <table class="table">
+                    <tbody>
+                        <tr>
+                        <th>DNI / CUIT</th>
+                            <td><%= data.dni %></td>
+                        </tr>
+                        <tr>
+                        <th style="height: 30px;"></th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        <th>Apellido</th>
+                            <td><%= data.apellido %></td>
+                        </tr>
+                        <tr>
+                          <th>Nombre</th>
+                            <td><%= data.nombre %></td>
+                        </tr>
+                        <!-- <tr>
+                        <th>APELLDIO Cliente</th>
+                            <td>Bruno</td>
+                        </tr>
+                        <tr>
+                        <th>Nombre Cliente</th>
+                            <td>Ricardo</td>
+                        </tr> -->
+                        <!-- <tr>
+                        <th>Telefono</th>
+                            <td><%= data.telefono %></td>
+                        </tr> -->
+                        <!-- <tr>
+                          <th>Honorarios Profesional</th>
+                            <td>$ 1000</td>
+                        </tr>
+                        <tr>
+                          <th>Monto Acreditado</th>
+                            <td>$ 950</td>
+                        </tr> -->
+                    </tbody>
+                  </table>
+              </div>
+              <div class="tabla">
+                  <table class="table">
+                    <tbody>
+                        <tr>
+                        <th>Nro Operacion</th>
+                            <td><%= data.numOperacion %></td>
+                        </tr>
+                        <tr>
+                        <th style="height: 30px;"></th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                        <!-- <th>Mail</th>
+                            <td><%= data.mail %></td>
+                        </tr> -->
+                        <!-- <tr>
+                          <th>DNI Cliente</th>
+                            <td>35953451</td>
+                        </tr>
+                          <tr>
+                        <th>APELLDIO Cliente</th>
+                            <td>Bruno</td>
+                        </tr>
+                        <tr>
+                        <th>Nombre Cliente</th>
+                            <td>Ricardo</td>
+                        </tr>
+                        <tr>
+                        <th>Tarjeta</th>
+                            <td>VISA</td>
+                        </tr>
+                        <tr>
+                          <th>Honorarios Profesional</th>
+                            <td>$ 1000</td>
+                        </tr>
+                        <tr>
+                          <th>Monto Acreditado</th>
+                            <td>$ 950</td>
+                        </tr> -->
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="panel panel-default">
+                <div class="panel-heading">Datos de Transaccion</div>
+                <div class="panel-body">
+                  <table class="table">
+                    <tbody>
+                        <!-- <tr>
+                        <th>CUIT Profesional</th>
+                            <td><%= data.cuitProfesional %></td>
+                        </tr> -->
+                        <tr>
+                        <th>Fecha Transaccion</th>
+                            <td><%= data.fechaImpresion %></td>
+                        </tr>
+                        <!-- <tr>
+                        <th>Fecha de Pago</th>
+                            <td><%= data.fechaPago %></td>
+                        </tr> -->
+                        <tr>
+                          <th>DNI Cliente</th>
+                            <td><%= data.dniCliente %></td>
+                        </tr>
+                          <tr>
+                        <th>APELLDIO Cliente</th>
+                            <td><%= data.apellidoCliente %></td>
+                        </tr>
+                        <tr>
+                        <th>Nombre Cliente</th>
+                            <td><%= data.nombreCliente %></td>
+                        </tr>
+                        <tr>
+                        <th>Tarjeta</th>
+                            <td><%= data.tarjeta %></td>
+                        </tr>
+                        <tr>
+                          <th>Pago de Honorarios</th>
+                            <td>$ <%= data.honorariosProfesional %></td>
+                        </tr>
+                        <tr>
+                          <th>Cuotas </th>
+                            <td><%= data.cuotas %></td>
+                        </tr>
+                        <tr>
+                          <th>Varlor Cuotas </th>
+                            <td>$ <%= data.importeCuota %></td>
+                        </tr>
+                        <tr>
+                          <th>N° Autorizacion / Cupon </th>
+                            <td><%= data.codigoAuto %> / <%= data.cupon %></td>
+                        </tr>
+                        <tr>
+                          <th>Mail </th>
+                            <td><%= data.mailCliente %></td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        
+    </body>
+    </html>
