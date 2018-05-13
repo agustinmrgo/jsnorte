@@ -25,8 +25,6 @@ exports.nuevoMarengo = function (req, fn) {
     });
 }
 
-
-
 exports.listarMarengo = function (fn) {
     connection.query('call tarjeta_listar()', function (err, rows) {
         if (err) {

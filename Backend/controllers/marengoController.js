@@ -19,3 +19,7 @@ exports.listarMarengo = function (req, res, next) {
         }
     });
 }
+
+exports.listarPersonas = function (req, res, next){
+    
+}

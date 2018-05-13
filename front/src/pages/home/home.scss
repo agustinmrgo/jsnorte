@@ -1,11 +1,40 @@
 
 page-home {
+    
+    .ion-content0{
+        background-color: lightsteelblue;
+    }
+
+    .toolbar-background {
+        background-color: steelblue;
+    }
+
+    .toolbar-title{
+        color: white;
+    }
+
+    .button-md {
+        background-color: steelblue;
+    }
+
     .card-selected{
-        background-color: #488aff !important;
+        background-color: indianred !important;
         color: white;
         .card-header{
             color: white;
         }
+    }
+
+    .input-list {
+        .item {
+            background-color: white;
+        }
+        
+    }
+
+    .ion-col1 {
+        // background-color: antiquewhite;
+        background-color: lightsteelblue;
     }
 }
 

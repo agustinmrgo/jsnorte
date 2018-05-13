@@ -3,7 +3,6 @@ module.exports = {
   port : "3306",
   user : "root",
   password : "",
-  //password : "",
-  database : "instituto_educativo"
+  database : "ClubHonorarios"
 };
 

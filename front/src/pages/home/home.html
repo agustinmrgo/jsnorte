@@ -1,25 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Formulario
+      Form
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="ion-content0">
 
   <ion-grid>
     <ion-row>
-      <ion-col col-4>
-        <ion-list>
+      <ion-col col-4 class="ion-col1">
+        <ion-list class="input-list">
           <ion-item>
-            <ion-input [(ngModel)]="dni" type="text" placeholder="DNI"></ion-input>
+            <ion-input [(ngModel)]="dni" type="text" placeholder="Name"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input [(ngModel)]="nombre" type="text" placeholder="Nombre"></ion-input>
+            <ion-input [(ngModel)]="nombre" type="text" placeholder="Username"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input [(ngModel)]="apellido" type="text" placeholder="Apellido"></ion-input>
+            <ion-input [(ngModel)]="apellido" type="text" placeholder="Email"></ion-input>
           </ion-item>
         </ion-list>
         <button ion-button (click)="crearPersona()">Submit</button>
