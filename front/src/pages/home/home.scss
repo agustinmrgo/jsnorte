@@ -17,6 +17,10 @@ page-home {
         background-color: steelblue;
     }
 
+    #submitButton1:hover{
+        background-color: rgb(90, 150, 200)
+    }
+
     .card-selected{
         background-color: indianred !important;
         color: white;
@@ -28,8 +32,7 @@ page-home {
     .input-list {
         .item {
             background-color: white;
-        }
-        
+        }   
     }
 
     .ion-col1 {

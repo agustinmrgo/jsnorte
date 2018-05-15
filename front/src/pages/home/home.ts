@@ -13,9 +13,9 @@ import { PersonaDetallePage } from '../persona-detalle/persona-detalle';
 
 export class HomePage {
 
-  dni: string;
-  nombre: string;
-  apellido: string;
+  name: string;
+  username: string;
+  email: string;
   arrayPersonas : any;
   p2: boolean;
 
@@ -30,17 +30,18 @@ export class HomePage {
   crearPersona() {
     // objeto mapeado con Persona con pura magia
     let temp = {
-      name: this.dni,
-      username: this.nombre,
-      email: this.apellido
+      name: this.name,
+      username: this.username,
+      email: this.email
     }
     let p = new Persona(temp);
     console.log(p);
-    // this.arrayPersonas.push(p);
+    this.arrayPersonas.push(p);
+    // console.log(this.arrayPersonas);
     // limpiar formulario
-    this.dni = null;
-    this.nombre = null;
-    this.apellido = null;
+    this.name = null;
+    this.username = null;
+    this.email = null;
     // this.navCtrl.push(PersonaDetallePage, {persona: p});
     // let parametros = {
     //   name: p.name,
