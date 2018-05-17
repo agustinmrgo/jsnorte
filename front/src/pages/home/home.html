@@ -7,9 +7,9 @@
 </ion-header>
 
 <ion-content padding class="ion-content0">
-
   <ion-grid>
     <ion-row>
+
       <ion-col col-4 class="ion-col1">
         <ion-list class="input-list">
           <ion-item>
@@ -23,7 +23,6 @@
           </ion-item>
         </ion-list>
         <button ion-button (click)="crearPersona()" id="submitButton1">Submit</button>
-
       </ion-col>
 
       <ion-col col-4>
@@ -37,13 +36,12 @@
               <br> {{p.email}}
             </ion-card-content>
           </ion-card>
-        </ion-scroll>  
+        </ion-scroll>
       </ion-col>
 
-      <ion-col col-4>
+      <ion-col col-4 style="overflow: hidden;">
         <page-persona-detalle [p]="pseleccionada"></page-persona-detalle>
       </ion-col>
-
     </ion-row>
   </ion-grid>
 
