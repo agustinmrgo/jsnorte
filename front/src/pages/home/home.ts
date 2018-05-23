@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import Persona from '../../models/Persona';
-import { Content, App } from 'ionic-angular';
+import { Content, App, MenuController } from 'ionic-angular';
 import { ConsultasProvider } from '../../providers/consultas/consultas';
 import { PersonaDetallePage } from '../persona-detalle/persona-detalle';
 
@@ -18,8 +18,9 @@ export class HomePage {
   arrayPersonas : any;
   p2: boolean;
 
-  constructor(public navCtrl: NavController, private prv: ConsultasProvider, private navPrm: NavParams, private app: App) {
+  constructor(public navCtrl: NavController, private prv: ConsultasProvider, private navPrm: NavParams, private app: App, menu: MenuController) {
     // app._setDisableScroll(true);
+    menu.enable(true);
     this.prv.holis().then((res) => {
       this.arrayPersonas = res;
       console.log("Holis promesa cumplida");
