@@ -6,13 +6,13 @@
   </ion-header>
   <ion-content>
     <ion-list >
-      <button ion-item>
+      <button ion-item (click)="openPage(Home)">
         Home
       </button>
-      <button ion-item (click)="openPage()">
+      <button ion-item (click)="openPage(admin-personas)">
         Admin people
       </button>
-      <button ion-item>
+      <button ion-item (click)="openPage(page-persona-detalle)">
         Person details
       </button>
       <button ion-item menuClose>
@@ -21,7 +21,7 @@
     </ion-list>
   </ion-content>
 </ion-menu>
-<ion-nav id="nav" #content [root]="" swipeBackEnabled="false"></ion-nav>
+<ion-nav id="nav" #content [root]=""></ion-nav>
 
 <ion-header>
   <ion-navbar>
@@ -29,7 +29,7 @@
         <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      Home
+      Admin people
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -72,5 +72,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
+  
 </ion-content>

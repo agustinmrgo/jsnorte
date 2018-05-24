@@ -10,12 +10,14 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PersonaDetallePage } from '../pages/persona-detalle/persona-detalle'
 import { ConsultasProvider } from '../providers/consultas/consultas';
+import { AdminPersonasPage } from '../pages/admin-personas/admin-personas';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    PersonaDetallePage
+    PersonaDetallePage,
+    AdminPersonasPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { ConsultasProvider } from '../providers/consultas/consultas';
   entryComponents: [
     MyApp,
     HomePage,
-    PersonaDetallePage
+    PersonaDetallePage,
+    AdminPersonasPage
   ],
   providers: [
     StatusBar,

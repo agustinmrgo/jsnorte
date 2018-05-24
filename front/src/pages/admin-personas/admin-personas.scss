@@ -1,0 +1,66 @@
+page-admin-personas {
+    .ion-content0{
+        background-color: lightsteelblue;
+        overflow: hidden;
+    }
+
+    .toolbar-background {
+        background-color: steelblue;
+    }
+
+    .toolbar-title{
+        color: white;
+    }
+
+    .button-md {
+        background-color: steelblue;
+    }
+
+    #submitButton1:hover{
+        background-color: rgb(90, 150, 200)
+    }
+
+    .card-selected{
+        background-color: indianred !important;
+        color: white;
+        .card-header{
+            color: white;
+        }
+    }
+
+    .input-list {
+        .item {
+            background-color: white;
+        }   
+    }
+
+    .ion-col1 {
+        background-color: lightsteelblue;
+    }
+
+    // .no-scroll .scroll-content{
+    //     overflow: hidden;
+    // }
+
+    // ** para ocultar las scrollbars: **
+    div::-webkit-scrollbar { 
+        border:none;
+        width:1vh; 
+        background: rgba(0,0,0,0);
+    }
+    div::-webkit-scrollbar-track { 
+        border:none; 
+        width:0; 
+        background: rgba(0, 0, 0, 0);
+    }
+    div::-webkit-scrollbar-thumb { 
+        border:none;
+        width:0px; 
+        background: rgba(54, 54, 54, 0.3);
+    }
+    // ** ** ** ** ** ** ** ** ** ** **
+
+    #col2-scroll{
+        margin: 0px;
+    }
+}

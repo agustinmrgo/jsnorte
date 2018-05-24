@@ -4,6 +4,7 @@ import Persona from '../../models/Persona';
 import { Content, App, MenuController } from 'ionic-angular';
 import { ConsultasProvider } from '../../providers/consultas/consultas';
 import { PersonaDetallePage } from '../persona-detalle/persona-detalle';
+import { AdminPersonasPage } from '../admin-personas/admin-personas';
 
 @Component({
   selector: 'page-home',
@@ -17,15 +18,18 @@ export class HomePage {
   email: string;
   arrayPersonas : any;
   p2: boolean;
+  HomePage: any = this;
 
   constructor(public navCtrl: NavController, private prv: ConsultasProvider, private navPrm: NavParams, private app: App, menu: MenuController) {
-    // app._setDisableScroll(true);
-    menu.enable(true);
     this.prv.holis().then((res) => {
       this.arrayPersonas = res;
       console.log("Holis promesa cumplida");
       console.log(this.arrayPersonas);
     });
+  }
+
+  openPage(){
+    this.navCtrl.push(AdminPersonasPage);
   }
 
   crearPersona() {
