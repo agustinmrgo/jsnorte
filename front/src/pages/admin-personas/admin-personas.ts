@@ -1,14 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { IonicPage, NavController, MenuController } from 'ionic-angular';
 import { ConsultasProvider } from '../../providers/consultas/consultas';
 import Persona from "../../models/Persona";
-
-/**
- * Generated class for the AdminPersonasPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -22,7 +15,7 @@ export class AdminPersonasPage {
   email: string;
   arrayPersonas : any;
 
-  constructor(public navCtrl: NavController, private prv: ConsultasProvider, private navPrm: NavParams, private app: App) {
+  constructor(public navCtrl: NavController, private prv: ConsultasProvider, menu: MenuController) {
     this.prv.holis().then((res) => {
       this.arrayPersonas = res;
       console.log("Holis promesa cumplida");
