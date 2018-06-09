@@ -6,9 +6,12 @@
     </ion-header>
 
     <ion-content>
-        <ion-list>
+        <ion-list style="overflow: hidden;">
         <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
             {{p.title}}
+        </button>
+        <button menuClose ion-item>
+            Close
         </button>
         </ion-list>
     </ion-content>

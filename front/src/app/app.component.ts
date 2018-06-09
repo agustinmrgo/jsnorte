@@ -26,8 +26,8 @@ export class MyApp {
     });
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'AdminPeople', component: AdminPersonasPage },
-      { title: 'PersonDetail', component: PersonaDetallePage }
+      { title: 'AdminPeople', component: AdminPersonasPage }
+      // { title: 'PersonDetail', component: PersonaDetallePage }
     ];
   }
 

@@ -1,3 +1,4 @@
+// import { PersonaDetallePage } from './../persona-detalle/persona-detalle';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, MenuController } from 'ionic-angular';
 import { ConsultasProvider } from '../../providers/consultas/consultas';
@@ -13,7 +14,7 @@ export class AdminPersonasPage {
   name: string;
   username: string;
   email: string;
-  arrayPersonas : any;
+  public arrayPersonas : any = [];
 
   constructor(public navCtrl: NavController, private prv: ConsultasProvider, menu: MenuController) {
     this.prv.holis().then((res) => {
@@ -21,10 +22,6 @@ export class AdminPersonasPage {
       console.log("Holis promesa cumplida");
       console.log(this.arrayPersonas);
     });
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AdminPersonasPage');
   }
 
   crearPersona() {
@@ -46,6 +43,20 @@ export class AdminPersonasPage {
   pseleccionada: Persona;
   mostrarPersona(p) {
     this.pseleccionada = p;
+  }
+  getItems(ev: any) {
+    // Reset items back to all of the items
+    // this.initializeItems();
+
+    // set val to the value of the searchbar
+    const val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      this.arrayPersonas = this.arrayPersonas.filter((persona) => {
+        return (persona.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
   }
 
 }
