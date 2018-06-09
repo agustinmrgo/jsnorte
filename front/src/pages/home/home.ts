@@ -18,7 +18,6 @@ export class HomePage {
   p2: boolean;
   HomePage: any = this;
 
-
   constructor(public navCtrl: NavController, private prv: ConsultasProvider, menu: MenuController) {
     menu.enable(true,"menuputo");
     this.prv.holis().then((res) => {
