@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 import Persona from '../../models/Persona';
-import { Content, App, MenuController } from 'ionic-angular';
 import { ConsultasProvider } from '../../providers/consultas/consultas';
-import { PersonaDetallePage } from '../persona-detalle/persona-detalle';
 import { AdminPersonasPage } from '../admin-personas/admin-personas';
 
 @Component({
@@ -20,7 +18,9 @@ export class HomePage {
   p2: boolean;
   HomePage: any = this;
 
-  constructor(public navCtrl: NavController, private prv: ConsultasProvider, private navPrm: NavParams, private app: App, menu: MenuController) {
+
+  constructor(public navCtrl: NavController, private prv: ConsultasProvider, menu: MenuController) {
+    menu.enable(true,"menuputo");
     this.prv.holis().then((res) => {
       this.arrayPersonas = res;
       console.log("Holis promesa cumplida");
@@ -28,8 +28,16 @@ export class HomePage {
     });
   }
 
-  openPage(){
+  // ## Navigation:
+  openAdminPeoplePage(){
+    // this.navCtrl.setRoot(AdminPersonasPage);
     this.navCtrl.push(AdminPersonasPage);
+  }
+
+  openHomePage(){
+    this.navCtrl.push(HomePage);
+    // this.navCtrl.setRoot(HomePage);
+
   }
 
   crearPersona() {
