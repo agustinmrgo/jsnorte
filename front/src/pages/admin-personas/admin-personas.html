@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ion-menu [content]="content" persistence="true" id="menuputo">
   <ion-header>
     <ion-toolbar>
@@ -20,6 +21,8 @@
 </ion-menu>
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
 
+=======
+>>>>>>> 0b66b10a400be88a5347a986f4dd374729bc2bd7
 <ion-header>
   <ion-navbar hideBackButton="true">
     <button ion-button icon-only menuToggle> 
@@ -51,8 +54,11 @@
       </ion-col>
 
       <ion-col col-12 col-md-4>
+        <ion-searchbar (ionInput)="getItems($event)">
+        </ion-searchbar>
         <ion-scroll style="width:100%;height:80vh" scrollY="true">
-          <ion-card *ngFor="let p of arrayPersonas" [class.card-selected]="p === pseleccionada" (click)="mostrarPersona(p)">
+          <ion-card *ngFor="let p of people" [class.card-selected]="p === pseleccionada" 
+                (click)="mostrarPersona(p)">
             <ion-card-header>
               {{p.name}}
             </ion-card-header>

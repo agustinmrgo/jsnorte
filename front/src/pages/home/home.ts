@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
+<<<<<<< HEAD
 import Persona from '../../models/Persona';
+=======
+>>>>>>> 0b66b10a400be88a5347a986f4dd374729bc2bd7
 import { ConsultasProvider } from '../../providers/consultas/consultas';
 import { AdminPersonasPage } from '../admin-personas/admin-personas';
 
@@ -11,13 +14,9 @@ import { AdminPersonasPage } from '../admin-personas/admin-personas';
 
 export class HomePage {
 
-  name: string;
-  username: string;
-  email: string;
-  arrayPersonas : any;
-  p2: boolean;
   HomePage: any = this;
 
+<<<<<<< HEAD
 
   constructor(public navCtrl: NavController, private prv: ConsultasProvider, menu: MenuController) {
     menu.enable(true,"menuputo");
@@ -32,11 +31,20 @@ export class HomePage {
   openAdminPeoplePage(){
     // this.navCtrl.setRoot(AdminPersonasPage);
     this.navCtrl.push(AdminPersonasPage);
+=======
+  constructor(public navCtrl: NavController, private prv: ConsultasProvider, menu: MenuController) { }
+
+  // ## Navigation:
+  openAdminPeoplePage(){
+    this.navCtrl.setRoot(AdminPersonasPage);
+    // this.navCtrl.push(AdminPersonasPage);
+>>>>>>> 0b66b10a400be88a5347a986f4dd374729bc2bd7
   }
 
   openHomePage(){
     this.navCtrl.push(HomePage);
     // this.navCtrl.setRoot(HomePage);
+<<<<<<< HEAD
 
   }
 
@@ -65,10 +73,9 @@ export class HomePage {
     //   console.log("Respuesta desde el Home.ts",res);
     // });
   }
+=======
+>>>>>>> 0b66b10a400be88a5347a986f4dd374729bc2bd7
 
-  pseleccionada: Persona;
-  mostrarPersona(p) {
-    this.pseleccionada = p;
   }
 
 }
